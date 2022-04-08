@@ -1,0 +1,83 @@
+{
+  "actor_hidden_activation": "tanh",
+  "actor_hiddens": [
+    256,
+    256
+  ],
+  "actor_lr": 0.01,
+  "batch_mode": "complete_episodes",
+  "buffer_size": 20000,
+  "critic_hidden_activation": "tanh",
+  "critic_hiddens": [
+    256,
+    256
+  ],
+  "critic_lr": 0.01,
+  "env": "foodenv",
+  "env_config": {
+    "agent_loc": {
+      "0": [
+        4,
+        4
+      ],
+      "1": [
+        6,
+        7
+      ]
+    },
+    "agents": [
+      0,
+      1
+    ],
+    "board_size": [
+      7,
+      10
+    ],
+    "food_loc": {
+      "food1": [
+        3,
+        3
+      ],
+      "food2": [
+        5,
+        5
+      ]
+    },
+    "mode": "coop",
+    "trainer": "maddpg"
+  },
+  "exploration_config": {
+    "epsilon_timesteps": 25000,
+    "final_epsilon": 0.0,
+    "type": "EpsilonGreedy"
+  },
+  "learning_starts": 1000,
+  "lr": 0.01,
+  "multiagent": {
+    "policies": {
+      "policy0": [
+        null,
+        "Box([0. 0. 0. 0. 0. 0. 0. 0.], [ 6.  9.  6.  9.  7. 10.  7. 10.], (8,), float32)",
+        "Discrete(4)",
+        {
+          "agent_id": 0
+        }
+      ],
+      "policy1": [
+        null,
+        "Box([0. 0. 0. 0. 0. 0. 0. 0.], [ 6.  9.  6.  9.  7. 10.  7. 10.], (8,), float32)",
+        "Discrete(4)",
+        {
+          "agent_id": 1
+        }
+      ]
+    },
+    "policy_mapping_fn": "<function <lambda> at 0x7f7c6c6a9320>"
+  },
+  "num_gpus": 0,
+  "num_workers": 1,
+  "rollout_fragment_length": 4,
+  "target_network_update_freq": 100,
+  "timesteps_per_iteration": 100,
+  "train_batch_size": 32
+}

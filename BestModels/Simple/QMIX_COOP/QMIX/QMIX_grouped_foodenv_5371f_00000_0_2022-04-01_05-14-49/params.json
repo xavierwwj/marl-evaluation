@@ -1,0 +1,57 @@
+{
+  "buffer_size": 20000,
+  "env": "grouped_foodenv",
+  "env_config": {
+    "agent_loc": {
+      "0": [
+        4,
+        4
+      ],
+      "1": [
+        6,
+        7
+      ]
+    },
+    "agents": [
+      0,
+      1
+    ],
+    "board_size": [
+      7,
+      10
+    ],
+    "food_loc": {
+      "food1": [
+        3,
+        3
+      ],
+      "food2": [
+        5,
+        5
+      ]
+    },
+    "mode": "coop",
+    "trainer": "qmix"
+  },
+  "exploration_config": {
+    "epsilon_timesteps": 25000,
+    "final_epsilon": 0.0,
+    "type": "EpsilonGreedy"
+  },
+  "grad_norm_clipping": 10,
+  "learning_starts": 1000,
+  "lr": 0.001,
+  "mixing_embed_dim": 256,
+  "model": {
+    "lstm_cell_size": 256,
+    "max_seq_len": 20
+  },
+  "num_gpus": 0,
+  "num_workers": 1,
+  "optim_alpha": 0.99,
+  "optim_eps": 1e-05,
+  "rollout_fragment_length": 4,
+  "target_network_update_freq": 100,
+  "timesteps_per_iteration": 100,
+  "train_batch_size": 32
+}
